@@ -1,20 +1,59 @@
+<div class = index_flash>
+<% if flash[:notice] %>
+     <p id="notice">
+       <%= flash[:notice] %>
+     </p>
+<% end %>
+</div>
+
 <h1>Books</h1>
 
- <h4>Title</h4>
+<table>
   
-<% @books.each do |book| %>
-  <span><%= book.title %></span>
-<% end %>
-
-
- <h4>Body</h4>
-
-<% @books.each do |book| %>
-  <span><%= book.body %></span>
-  <%= link_to "Show",book_path(book.id) %>
-  <%= link_to "Edit",edit_book_path(book.id) %>
-  <%= link_to "Destroy", destroy_book_path(book.id), method: :delete, "data-confirm" => "Are you sure？" %>
+<tr>
+  <th>Title</th><th>Body</th><th></th><th></th><th></th>
+</tr>
   
-<% end %>
+<tr>
+  <td>
+    <div class = "book_title">
+    <% @books.each do |book| %>
+    <span><%= book.title %></span>
+    <% end %>
+    </div>
+  </td>
 
+  <td>
+    <div class = "book_body">
+    <% @books.each do |book| %>
+    <span><%= book.body %></span>
+    <% end %>
+    </div>
+  </td>
+ 
+ <td>
+   <div class = "book_link">
+    <% @books.each do |book| %>
+    <%= link_to "Show",book_path(book.id) %>
+    <% end %>
+   </div>
+ </td>
+ 
+ <td>
+   <div class = "book_link">
+    <% @books.each do |book| %>
+    <%= link_to "Edit",edit_book_path(book.id) %>
+    <% end %>
+   </div>
+ </td>
+ 
+ <td>
+   <div class = "book_link">
+    <% @books.each do |book| %>
+    <%= link_to "Destroy", destroy_book_path(book.id), method: :delete, "data-confirm" => "Are you sure？" %>
+    <% end %>
+   </div>
+ </td>
+</tr>
+</table>
 

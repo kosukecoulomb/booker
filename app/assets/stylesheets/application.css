@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+
+.top{
+  margin: 30px;
+}
+
+.index_flash{
+  color: #00FF00
+}
+
+.error{
+  color: red;
+}
+
+.book_title{
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.book_body{
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.book_link{
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+}

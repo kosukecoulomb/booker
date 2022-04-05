@@ -1,8 +1,17 @@
+<div class = index_flash>
+<% if flash[:notice] %>
+     <p id="notice">
+       <%= flash[:notice] %>
+     </p>
+<% end %>
+</div>
+
 <h4>Title:</h4>
 <P><%= @book.title %></P>
 
 <h4>Body:</h4>
 <P><%= @book.body %></P>
+
 <%= link_to "edit",edit_book_path(@book.id) %>
 <span>|</span>
 <%= link_to "Back",'/books' %>
