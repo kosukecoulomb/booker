@@ -50,7 +50,7 @@
  <td>
    <div class = "book_link">
     <% @books.each do |book| %>
-    <%= link_to "Destroy", destroy_book_path(book.id), method: :delete, "data-confirm" => "Are you sure？" %>
+    <%= link_to "Destroy", book_path(book.id), method: :delete, "data-confirm" => "Are you sure？" %>
     <% end %>
    </div>
  </td>
