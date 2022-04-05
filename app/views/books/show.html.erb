@@ -6,12 +6,18 @@
 <% end %>
 </div>
 
-<h4>Title:</h4>
-<P><%= @book.title %></P>
+<div class = "show">
+<strong>Title:</strong>
+<%= @book.title %>
+</div>
 
-<h4>Body:</h4>
-<P><%= @book.body %></P>
+<div class = "show">
+<strong>Body:</strong>
+<%= @book.body %>
+</div>
 
-<%= link_to "edit",edit_book_path(@book.id) %>
+<div>
+<%= link_to "Edit",edit_book_path(@book.id) %>
 <span>|</span>
 <%= link_to "Back",'/books' %>
+</div>

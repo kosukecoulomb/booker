@@ -6,10 +6,10 @@
 <% end %>
 </div>
 
-<h1>Books</h1>
+<div class = "book_index">
+  <h1>Books</h1>
 
 <table>
-
 <tr>
   <th>Title</th><th>Body</th><th></th><th></th><th></th>
 </tr>
@@ -56,7 +56,9 @@
  </td>
 </tr>
 </table>
+</div>
 
+<div class = "create_book">
 <h2>New book</h2>
 
 <% if @book.errors.any? %>
@@ -77,3 +79,4 @@
 
   <%= f.submit 'Create Book' %>
 <% end %>
+</div>
