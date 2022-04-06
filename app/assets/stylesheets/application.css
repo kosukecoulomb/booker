@@ -31,17 +31,11 @@
 }
 
 .book_title{
-  display: flex;
-  flex-direction: column;
-  white-space: nowrap;
   padding-left: 10px;
   padding-right: 10px;
 }
 
 .book_body{
-  display: flex;
-  flex-direction: column;
-  white-space: nowrap;
   padding-left: 10px;
   padding-right: 10px;
 }
